@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".MenuActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginBottom="350dp"
+        android:weightSum="1"
+        android:layout_alignParentTop="true">
+
+        <SurfaceView
+            android:layout_width="246dp"
+            android:layout_height="143dp"
+            android:id="@+id/surfaceView"/>
+
+    </LinearLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="155dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context=".MainActivity"
+        android:clickable="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ButtonUbicacion"
+            android:background="@drawable/b_buscar"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="40dip"
+            android:padding="20dip"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonLista"
+            android:background="@drawable/b_lista"
+            android:layout_alignBottom="@+id/ButtonUbicacion"
+            android:layout_toEndOf="@+id/ButtonUbicacion"
+            android:layout_marginStart="67dp"
+            android:layout_marginTop="40dip"
+            android:padding="20dip"/>
+
+    </RelativeLayout>
+</RelativeLayout>
