@@ -28,6 +28,11 @@
 
         <activity android:name=".imagenElegia"></activity>
 
+        <activity android:name=".informacionActivity"></activity>
+
+        <activity android:name=".acerActivity"></activity>
+
+
     </application>
 
 </manifest>

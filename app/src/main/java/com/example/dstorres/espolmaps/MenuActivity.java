@@ -15,11 +15,15 @@ import com.example.dstorres.espolmaps.load_src.GifRun;
  * Created by dstorres on 27/05/2016.
  */
 public class MenuActivity  extends AppCompatActivity {
-    Button ib_menu_b = null;
-    Button ib_menu_l = null;
+    private Button ib_menu_b = null;
+    private Button ib_menu_l = null;
+    private Button ib_menu_a = null;
+    private Button ib_menu_i = null;
     private Intent rutasActivity= null;
-    GifRun w;
-    SurfaceView v;
+    private Intent acerActivity= null;
+    private Intent infoActivity= null;
+    private GifRun w;
+    private SurfaceView v;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -28,6 +32,9 @@ public class MenuActivity  extends AppCompatActivity {
         v= (SurfaceView) findViewById(R.id.surfaceView);
         ib_menu_b = (Button)findViewById(R.id.ButtonUbicacion);
         ib_menu_l = (Button)findViewById(R.id.imageButtonLista);
+        ib_menu_a = (Button)findViewById(R.id.ButtonAcercade);
+        ib_menu_i = (Button)findViewById(R.id.imageButtonInfo);
+
         w = new GifRun();
         w.LoadGiff(v,this,R.drawable.one_piece);
 
@@ -48,6 +55,23 @@ public class MenuActivity  extends AppCompatActivity {
             }
         });
 
-        w.LoadGiff(v,MenuActivity.this,R.drawable.one_piece);
+        ib_menu_a.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                acerActivity = new Intent(MenuActivity.this, acerActivity.class);
+                startActivity(acerActivity);
+
+            }
+        });
+        ib_menu_i.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                infoActivity = new Intent(MenuActivity.this, informacionActivity.class);
+                startActivity(infoActivity);
+
+            }
+        });
+
+        w.LoadGiff(v,this,R.drawable.one_piece);
     }
 }

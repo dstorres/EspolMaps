@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:gravity="center"
     tools:context=".MenuActivity">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:gravity="center"
-        android:layout_marginBottom="320dp"
+        android:layout_marginBottom="330dp"
         android:weightSum="1"
         android:layout_alignParentTop="true">
 
@@ -20,12 +20,13 @@
             android:id="@+id/surfaceView"
             android:layout_gravity="bottom"/>
 
-    </LinearLayout>
+    </RelativeLayout>
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="190dp"
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="200dp"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
@@ -69,11 +70,11 @@
             android:layout_height="wrap_content"
             android:id="@+id/imageButtonInfo"
             android:background="@drawable/b_informacion"
+            android:padding="50dip"
+            android:layout_alignTop="@+id/ButtonAcercade"
+            android:layout_alignStart="@+id/imageButtonLista"
             android:layout_alignBottom="@+id/ButtonAcercade"
-            android:layout_toEndOf="@+id/ButtonAcercade"
-            android:layout_marginStart="67dp"
-            android:layout_marginTop="40dip"
-            android:padding="20dip"/>
+            android:layout_alignEnd="@+id/imageButtonLista" />
 
     </RelativeLayout>
 </RelativeLayout>
